@@ -7,4 +7,9 @@
     <string name="button_text_potencia">Potencia</string>
     <string name="button_text_salir">Salir</string>
 
+    <string name="edittext_hint_usuario">Ingrese usuario</string>
+    <string name="edittext_hint_contrasenia">Ingrese contraseña</string>
+    <string name="button_text_ingreso">INGRESAR</string>
+
+
 </resources>

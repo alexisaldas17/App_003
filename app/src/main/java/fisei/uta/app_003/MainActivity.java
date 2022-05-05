@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        //obtener los parametros de la otra Activity
+        Bundle bundle = getIntent().getExtras();
+        et_resultado.setText(bundle.getString("variable_usuario"));
     }
 /*
     public void onCLicPotencia(View vista) {
@@ -60,5 +64,5 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
-  
+
 }
