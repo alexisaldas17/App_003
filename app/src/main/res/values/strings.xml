@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">App_003</string>
+
+    <string name="edittext_hint_primervalor">Ingrese la base</string>
+    <string name="edittext_hint_segundovalor">Ingrese el exponente</string>
+    <string name="edittext_hint_resultado">Resultado</string>
+    <string name="button_text_potencia">Potencia</string>
+    <string name="button_text_salir">Salir</string>
+
 </resources>
