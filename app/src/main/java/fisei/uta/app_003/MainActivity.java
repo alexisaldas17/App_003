@@ -2,10 +2,14 @@ package fisei.uta.app_003;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import fisei.uta.app_003.logica.Matematicas;
 
 public class MainActivity extends AppCompatActivity {
     //DECLARACION
@@ -49,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
         //obtener los parametros de la otra Activity
         Bundle bundle = getIntent().getExtras();
         et_resultado.setText(bundle.getString("variable_usuario"));
+        this.getSupportActionBar().setTitle("Usuario conectado:" +
+                bundle.getString("variable_usuario"));
+    }
+
+    public void onClicMostrarActivity(View vista){
+        Intent intent = new Intent(this, TercerActivity.class);
+        startActivity(intent);
+
     }
 /*
     public void onCLicPotencia(View vista) {
@@ -63,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         et_resultado.setText(String.valueOf(res));
     }
     */
-
+    public void onClicAbrirNavegador(View vista){
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+        startActivity(intent);
+    }
+    public void onCliclLlamar(View vista){
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+5930979226628"));
+        //Uri  uri = new Uri("PAramentrso"); ES OTRA FORMA
+        startActivity(intent);
+    }
 
 }

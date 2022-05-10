@@ -45,7 +45,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:editable="false"
         android:ems="10"
+        android:focusable="false"
         android:hint="@string/edittext_hint_resultado"
         android:inputType="numberSigned"
         android:minHeight="48dp"
@@ -73,9 +75,56 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="135dp"
+        android:backgroundTint="#E31010"
         android:text="@string/button_text_salir"
+        android:textColorHighlight="#E42828"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMostrarNavegador"
+        app:rippleColor="#D32020" />
+
+    <Button
+        android:id="@+id/buttonMostrarActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#9C27B0"
+        android:onClick="onClicMostrarActivity"
+        android:text="@string/button_text_mostrarActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPotencia" />
+
+    <Button
+        android:id="@+id/buttonLlamar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onCliclLlamar"
+        android:text="@string/button_text_llamar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMostrarActivity" />
+
+    <Button
+        android:id="@+id/buttonMostrarNavegador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onClicAbrirNavegador"
+        android:text="@string/button_text_mostrarNavegador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLlamar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

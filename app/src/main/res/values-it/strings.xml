@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">App_003</string>
 
@@ -12,9 +13,5 @@
     <string name="button_text_ingreso">INGRESAR</string>
 
     <string name="button_text_mostrarActivity">Mostrar Activity</string>
-
-    <string name="button_text_llamar">Llamar</string>
-    <string name="button_text_mostrarNavegador">Mostrar Navegador</string>
-
 
 </resources>

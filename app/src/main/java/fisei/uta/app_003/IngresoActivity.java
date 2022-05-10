@@ -24,7 +24,8 @@ public class IngresoActivity extends AppCompatActivity {
         String usuario = etUsuario.getText().toString();
         String contrasenia = etCOntrasenia.getText().toString();
         if (usuario.equals("admin") && contrasenia.equals("admin")) {
-            //mostrar activity
+            //mostrar activity Intent para llamar actividades
+
             //Intent intent = new Intent(IngresoActivity.this, MainActivity.class);
             Intent intent = new Intent(this, MainActivity.class);
             //pasar parametro al activity

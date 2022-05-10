@@ -1,4 +1,4 @@
-package fisei.uta.app_003;
+package fisei.uta.app_003.logica;
 
 public class Matematicas {
     public long Potencia(int base, int exponente){
