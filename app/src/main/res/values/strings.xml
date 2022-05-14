@@ -16,5 +16,15 @@
     <string name="button_text_llamar">Llamar</string>
     <string name="button_text_mostrarNavegador">Mostrar Navegador</string>
 
+    <string name="menu_archivo">Archivo</string>
+    <string name="menu_acercaDe">Acerca de...</string>
+    <string name="menu_salir">Salir</string>
+
+    <string name="menu_editar">Editar</string>
+    <string name="menu_editar_copiar">Copiar</string>
+    <string name="menu_editar_cortar">Cortar</string>
+    <string name="menu_editar_pegar">Pegar</string>
+
+
 
 </resources>

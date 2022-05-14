@@ -1,13 +1,19 @@
 package fisei.uta.app_003;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import fisei.uta.app_003.logica.Matematicas;
 
@@ -59,7 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClicMostrarActivity(View vista){
         Intent intent = new Intent(this, TercerActivity.class);
-        startActivity(intent);
+
+        activityResult.launch((intent));
+        //startActivity(intent);
 
     }
 /*
@@ -84,5 +92,23 @@ public class MainActivity extends AppCompatActivity {
         //Uri  uri = new Uri("PAramentrso"); ES OTRA FORMA
         startActivity(intent);
     }
+
+    //onActivityResult esta descontinuado recibir datos al cerrar ventana
+    //RECIBIENDO INFORMACION DESDE TERCER ACTIVITY
+
+    //NUEVA FORMA DE OBTENER LOS DATOS REGRESADOS AL CERRAR UNA ACTIVIDAD
+    ActivityResultLauncher<Intent> activityResult =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    //Procesar datos
+                    if (result.getResultCode() == Activity.RESULT_OK){//asegura que todo esta correcto
+
+                        //Obtener datos regresados
+                        Intent data = result.getData();
+                        Toast.makeText(getApplicationContext(), "Dato regresado: "+ data.getDataString(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
 }

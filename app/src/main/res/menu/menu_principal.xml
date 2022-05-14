@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/menu_archivo"
+        android:id="@+id/menu_archivo"/>
+    <item android:title="@string/menu_acercaDe"
+        android:id="@+id/menu_acercaDe"/>
+<!--Opcion principal del menu-->
+    <item android:title="@string/menu_editar"
+        android:id="@+id/menu_editar"
+        app:showAsAction="ifRoom">
+
+        <!--submenus-->
+        <menu>
+        <group>
+            <item android:title="@string/menu_editar_cortar"
+                android:id="@+id/menu_cortar"
+                app:showAsAction="ifRoom"/>
+            <item android:title="@string/menu_editar_copiar"
+                android:id="@+id/menu_copiar"
+                app:showAsAction="ifRoom"/>
+            <item android:title="@string/menu_editar_pegar"
+                android:id="@+id/menu_pegar"
+                app:showAsAction="ifRoom"/>
+        </group>
+        </menu>
+    </item>
+    <item android:title="@string/menu_salir"
+        android:id="@+id/menu_salir"/>
+</menu>
